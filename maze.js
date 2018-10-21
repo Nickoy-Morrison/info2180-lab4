@@ -33,7 +33,7 @@ function part2(){
 }
 
 //Exercise 3
-function part3(){
+/*function part3(){
 	var End = document.getElementById("end");
 
 		End.addEventListener("mouseover", function(){
@@ -41,7 +41,7 @@ function part3(){
 				alert("You Win!!");
 			}
 		});
-}
+}*/
 
 //Exercise 4
 function part4(){

@@ -1,6 +1,7 @@
 window.onload = main;
 var flag = 0;
 function main(){
+
 		//Exercise 1
 		document.getElementById("boundary1").addEventListener("mouseover", part1);
 
@@ -11,10 +12,13 @@ function main(){
 		}
 
 		//Exercise 3
-		part3();
+		//part3();
 
 		//Exercise 4
 		part4();
+
+		//Exercise 6
+		part6();
 }
 
 //Exercise 1
@@ -29,6 +33,7 @@ function part2(){
 			Boundary[i].className = "boundary youlose";
 			flag = 1;
 	}
+	//Exercise 5
 	part5(flag);
 }
 
@@ -53,6 +58,7 @@ function part4(){
 	}
   document.getElementById("status").textContent = "Game In Session";
   flag = 0;
+	//Exercise 5
   part5(flag);
 });
 
@@ -67,5 +73,17 @@ function part5(set){
 		}else{
 			status.textContent = "You Lose!";
 		}
+	});
+}
+
+//Exercise 6
+function part6(){
+	var boundary = document.querySelectorAll(".boundary");
+	document.getElementById("start").addEventListener("mouseout", function(){
+		document.getElementById("maze").addEventListener("mouseleave", function(){
+			for(var i = 0; i < boundary.length; i++){
+				part2();
+			}
+		});
 	});
 }

@@ -12,6 +12,9 @@ function main(){
 
 		//Exercise 3
 		part3();
+
+		//Exercise 4
+		part4();
 }
 
 //Exercise 1
@@ -38,4 +41,19 @@ function part3(){
 				alert("You Win!!");
 			}
 		});
+}
+
+//Exercise 4
+function part4(){
+
+	document.getElementById("start").addEventListener("click", function(){
+  var boundary = document.querySelectorAll(".boundary");
+	for (var i = 0; i < boundary.length-1; i++) {
+			boundary[i].className = "boundary";
+	}
+  document.getElementById("status").textContent = "Game In Session";
+  //flag = 0;
+  //part5(flag);
+});
+
 }

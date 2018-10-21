@@ -29,7 +29,7 @@ function part2(){
 			Boundary[i].className = "boundary youlose";
 			flag = 1;
 	}
-	//part5(flag);
+	part5(flag);
 }
 
 //Exercise 3
@@ -52,8 +52,20 @@ function part4(){
 			boundary[i].className = "boundary";
 	}
   document.getElementById("status").textContent = "Game In Session";
-  //flag = 0;
-  //part5(flag);
+  flag = 0;
+  part5(flag);
 });
 
+}
+
+//Exercise 5
+function part5(set){
+	var status = document.getElementById("status");
+	document.getElementById("end").addEventListener("mouseover", function(){
+		if(set == 0){
+			status.textContent = "You win!";
+		}else{
+			status.textContent = "You Lose!";
+		}
+	});
 }

@@ -1,6 +1,9 @@
 window.onload = main;
 var flag = 0;
 function main(){
+		document.getElementById("start").addEventListener("mouseover", function(){
+			document.getElementById("status").textContent = "Game In Session";
+		});
 
 		//Exercise 1
 		document.getElementById("boundary1").addEventListener("mouseover", part1);
@@ -31,6 +34,7 @@ function part2(){
 	var Boundary = document.querySelectorAll(".boundary");
 	for(var i = 0; i < Boundary.length; i++){
 			Boundary[i].className = "boundary youlose";
+			document.getElementById("status").textContent = "You Lose! \n Click on the S to restart the game.";
 			flag = 1;
 	}
 	//Exercise 5
